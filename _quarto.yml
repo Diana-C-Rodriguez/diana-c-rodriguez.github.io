@@ -13,7 +13,7 @@ website:
         text: research
       - href: project.qmd
         text: project
-      - href: cv.pdf
+      - href: cv.qmd
         text: cv
 
 format:
