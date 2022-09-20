@@ -1,30 +1,72 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
+    "objectID": "Assignments.html",
+    "href": "Assignments.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Generative art by Anders Hoff. This is part of his project “Inconvergent”, which explores the complex behavior that emerges from systems with simple rules.\n\n\n\n\n\n\nAlthough the chart above clearly demonstrates the different discount rate changes between hyperbolic and exponential discounting; however, the unites of the time delay variable could be more specifically labeled, as could the relevance of the rate over time. Additionally, the graph key is a bit misleading by using two different measures of change. The hyperbolic change seems to have a quicker descent at first; however, the key seems to contradict that in this visual."
+  },
+  {
+    "objectID": "Assignment2.html",
+    "href": "Assignment2.html",
+    "title": "Diana-C-Rodriguez",
+    "section": "",
+    "text": "## Paul Murrell's R examples (selected)\n\n## Start plotting from basics \n# Note the order\nplot(pressure, pch=16)  # Can you change pch? \ntext(150, 600, \n     \"Pressure (mm Hg)\\nversus\\nTemperature (Celsius)\")\n\n\n\n#  Examples of standard high-level plots \n#  In each case, extra output is also added using low-level \n#  plotting functions.\n# \n\n# Setting the parameter (3 rows by 2 cols)\npar(mfrow=c(3, 2))\n\n# Scatterplot\n# Note the incremental additions\n\nx <- c(0.5, 2, 4, 8, 12, 16)\ny1 <- c(1, 1.3, 1.9, 3.4, 3.9, 4.8)\ny2 <- c(4, .8, .5, .45, .4, .3)\n\n# Setting label orientation, margins c(bottom, left, top, right) & text size\npar(las=1, mar=c(4, 4, 2, 4), cex=.7) \nplot.new()\nplot.window(range(x), c(0, 6))\nlines(x, y1)\nlines(x, y2)\npoints(x, y1, pch=16, cex=2) # Try different cex value?  \npoints(x, y2, pch=21, bg=\"white\", cex=2)  # Different background color\npar(col=\"gray50\", fg=\"gray50\", col.axis=\"gray50\")\naxis(1, at=seq(0, 16, 4)) # What is the first number standing for? \naxis(2, at=seq(0, 6, 2))\naxis(4, at=seq(0, 6, 2))\nbox(bty=\"u\")\nmtext(\"Travel Time (s)\", side=1, line=2, cex=0.8)\nmtext(\"Responses per Travel\", side=2, line=2, las=0, cex=0.8)\nmtext(\"Responses per Second\", side=4, line=2, las=0, cex=0.8)\ntext(4, 5, \"Bird 131\")\npar(mar=c(5.1, 4.1, 4.1, 2.1), col=\"black\", fg=\"black\", col.axis=\"black\")\n\n# Histogram\n# Random data\nY <- rnorm(50)\n# Make sure no Y exceed [-3.5, 3.5]\nY[Y < -3.5 | Y > 3.5] <- NA # Selection/set range\nx <- seq(-3.5, 3.5, .1)\ndn <- dnorm(x)\npar(mar=c(4.5, 4.1, 3.1, 0))\nhist(Y, breaks=seq(-3.5, 3.5), ylim=c(0, 0.5), \n     col=\"gray80\", freq=FALSE)\nlines(x, dnorm(x), lwd=2)\npar(mar=c(5.1, 4.1, 4.1, 2.1))\n\n# Barplot\npar(mar=c(2, 3.1, 2, 2.1)) \nmidpts <- barplot(VADeaths, \n                  col=gray(0.1 + seq(1, 9, 2)/11), \n                  names=rep(\"\", 4))\nmtext(sub(\" \", \"\\n\", colnames(VADeaths)),\n      at=midpts, side=1, line=0.5, cex=0.5)\ntext(rep(midpts, each=5), apply(VADeaths, 2, cumsum) - VADeaths/2,\n     VADeaths, \n     col=rep(c(\"white\", \"black\"), times=3:2), \n     cex=0.8)\npar(mar=c(5.1, 4.1, 4.1, 2.1))  \n\n# Boxplot\npar(mar=c(3, 4.1, 2, 0))\nboxplot(len ~ dose, data = ToothGrowth,\n        boxwex = 0.25, at = 1:3 - 0.2,\n        subset= supp == \"VC\", col=\"white\",\n        xlab=\"\",\n        ylab=\"tooth length\", ylim=c(0,35))\nmtext(\"Vitamin C dose (mg)\", side=1, line=2.5, cex=0.8)\nboxplot(len ~ dose, data = ToothGrowth, add = TRUE,\n        boxwex = 0.25, at = 1:3 + 0.2,\n        \n        subset= supp == \"OJ\")\nlegend(1.5, 9, c(\"Ascorbic acid\", \"Orange juice\"), \n       fill = c(\"white\", \"gray\"), \n       bty=\"n\")\npar(mar=c(5.1, 4.1, 4.1, 2.1))\n\n# Persp\nx <- seq(-10, 10, length= 30)\ny <- x\nf <- function(x,y) { r <- sqrt(x^2+y^2); 10 * sin(r)/r }\nz <- outer(x, y, f)\nz[is.na(z)] <- 1\n# 0.5 to include z axis label\npar(mar=c(0, 0.5, 0, 0), lwd=0.5)\npersp(x, y, z, theta = 30, phi = 30, \n      expand = 0.5)\npar(mar=c(5.1, 4.1, 4.1, 2.1), lwd=1)\n\n# Piechart\npar(mar=c(0, 2, 1, 2), xpd=FALSE, cex=0.5)\npie.sales <- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)\nnames(pie.sales) <- c(\"Blueberry\", \"Cherry\",\n                      \"Apple\", \"Boston Cream\", \"Other\", \"Vanilla\")\npie(pie.sales, col = gray(seq(0.3,1.0,length=6))) \n\n\n\n# Exercise: Can you generate these charts individually?  Try these functions \n# using another dataset. Be sure to work on the layout and margins"
+  },
+  {
+    "objectID": "images/Assignment2.html",
+    "href": "images/Assignment2.html",
+    "title": "Diana-C-Rodriguez",
+    "section": "",
+    "text": "Build a Quarto blog on your personal website:\nhttps://Diana-C-Rodriguez.github.io/blog\n \nRun Paul Murrell’s RGraphics basic R programs (murrell01.R in GitHub)\n1)    plot(pressure, pch=16): Can you change pch?\nYes, the “pch” alters the shape of the data points on the graph\n2)    points(x, y1, pch=16, cex=2): Try different cex value?\nI tried a larger “cex” value and noticed that the size of the data points became larger\n3)    axis(1, at=seq(0, 16, 4)): What is the first number standing for?\nThe following line correlates to the line in question: mtext(“Travel Time (s)”, side=1, line=2, cex=0.8).\n4)    Exercise: Can you generate these charts individually? \nYes. Each graph can be generated independently by isolating the desired graphs syntax.\n\n\n\nGGplot of HPI in 2020\n\n\n\n\n\nHPI graph using Murrell example syntax"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Diana-C-Rodriguez.github.io",
+    "section": "",
+    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "blog/posts/post-with-code/index.html",
+    "href": "blog/posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
     "title": "About",
     "section": "",
     "text": "About this blog"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "_blog",
+    "objectID": "blog/blog.html",
+    "href": "blog/blog.html",
+    "title": "blog",
     "section": "",
     "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2022\n\n\nDiana Rodriguez\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2022\n\n\nDiana Rodriguez\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "CV.html",
+    "href": "CV.html",
+    "title": "CV",
+    "section": "",
+    "text": "THE UNIVERSITY OF TEXAS AT DALLAS\nDoctor of Philosophy in Criminology- Current -\n\nMember of the Criminology Graduate Student Association\n3.8 GPA\nTeaching Assistant for Undergraduate Courses: Introduction to Criminal Justice; Guns and Crime in Criminal Justice o Instructor of Course: Advanced Criminology; Criminal Law\nReceived “exceeded expectation” in every TA evaluation category\nExclusively received positive student reviews as instructor of course(s)\n\nUNIVERSITY OF HOUSTON- DOWNTOWN\n\nMasters of Science in Criminal Justice, December 2020\nMember of the Alpha Phi Sigma National Honor Society\n3.9 GPA\nProfessor Assistant for Freshman Seminar- University of Houston-Downtown\nResearch development student (Determinate Sentencing/Peer Mediation)\nCriminal Justice Service Excellence Award recipient - University of Houston-Downtown\n\nUNIVERSITY OF HOUSTON- DOWNTOWN\nBachelor of Science in Criminal Justice, December 2014 - Focus of studies in Juvenile Justice - Minor in Spanish - Oral presentation and literature\nWORK EXPERIENCE\nLone Star College – Montgomery August 2022- Current Adjunct Professor Undergraduate Course in Criminal Justice: Introduction to CJ\nThe Woodlands, TX\n\nProvide instruction through duo modalities (in-person/online)\nCreate course curriculum, syllabus, and calendar\nExplain course work and provide guidance to students based on individual needs\nGrade assignments and report grades adhering to campus policy\nHost tutoring session and office hours for students according to student needs and schedules\nRespond to student concerns and needs for accommodations with equity and fair treatment\n\nThe University of Texas at Dallas August 2021- Current\nTeaching Assistant Undergraduate Courses in Criminal Justice: Introduction to CJ; Guns and Crime in CJ; Advanced Criminology (instructor); Criminal Law (instructor) Richardson, TX - Create course curriculum, syllabus, and calendar\n\nExplain course work and provide guidance to students based on individual needs\nGrade assignments and report grades adhering to campus policy\nHost tutoring session for students according to student needs and schedules\nPrimary point of contact for students\nRespond to student concerns and needs for accommodations with equity and fair treatment\nCreate extra credit assignments for students\n\nHarris County Juvenile Probation July 2017 – August 2021 Renew, Inspire, Support, Empower (RISE) Program Community Unit Probation Services (CUPS4) 2017-2018 Community Unit Probation Services (CUPS9) 2018-2019 Court 360- Specialized Court Probation Officer (2019-2020) Houston, Texas\n\nCo-creator and facilitator for RISE Youth Town Hall/ RISE Life Skills Programs.\nDevelop creative case plan goals using evidence-based practices.\nMaintain Texas Department of Criminal Justice practice standards.\nDevelop relationships with community programs, schools, and rehabilitative programs.\nCommunication with clients, attorneys, and courts personnel.\nAssess for individualized needs of youths and their families and provide appropriate resources.\nMaintained knowledge regarding Juvenile codes and Texas Education Agency Policies.\n\nHarris County- TRIAD January 2016 – July 2017 Justice of the Peace Court Liaison Program Specialist community program development, triage services, education services Houston, Texas\n\nProvided individualized resource information according to needs of at-risk youths and their families.\nDeveloped relationships with community programs, schools, and rehabilitative programs.\nRemained informed regarding Juvenile Justice Code, and Texas Education Agency policies.\nDeveloped Community based programs (Teen Awareness).\nDemonstrated leadership skills, resulting in program specialist responsibilities.\n\nDepartment of Family and Protective services (DFPS) 2015- 2016 Investigator Houston, Texas\n\nPrepared necessary documents for the court systems.\nInvestigated allegations of abuse or neglect to determine safety of children.\nCompleted DFPS Academy Training (120 hours).\nAccurately documented investigations, and provided detailed information in written and oral form.\nMaintained consistent contact with clients and colleagues.\n\nJustice of the Peace- Court Clerk 2012- 2015 Juvenile Criminal Court Clerk Houston, Texas\n\nDrafted pleadings, motions, oppositions, and court orders.\nProvided families with information regarding court proceedings.\nInterpretation Aid for Spanish speaking families.\nDeveloped relationships with prosecutors and community support programs.\nMaintained knowledge regarding Juvenile codes and Texas Education Agency Policies.\nDeveloped relationships with at-risk youth, parents, and school personnel.\n\nPROFESSIONAL TRAINING\nRestorative conference facilitator training (April 2022) Center for Restorative Justice and Peacemaking\nGrant Writing Certification (current) The University of Texas at Dallas\nACADEMIC RESEARCH\nA review of restorative justice in U.S. schools – Academic article (work in progress) The University of Texas at Dallas\nPeer Circles - Program Manual (work in progress) University of Houston-Downtown/ The University of Texas at Dallas\nFear of Crime According to Self-Identification of Femininity (work in progress) The University of Texas at Dallas\nContinued research in the following fields of interest:\nRestorative justice o Juvenile delinquency\nSocioeconomic status and disparities in CJ\nPROFESSIONAL AFFILIATIONS\nACADEMY OF CRIMINAL JUSTICE SCIENCES National Organization - Student Member (current)\nCENTER FOR RESTORATIVE JUSTICE AND PEACEMAKING (Current member)\nVOLUNTEER EXPERIENCE\nTRIAD “TEEN AWARENESS” FACILITATOR (2014-2016)\nGUEST SPEAKER: TRUANCY - University of Houston Graduate Social Work Program (2015-2016)\nWORK TEXAS- HORTICULTURE PROJECT (2019-2020)\nPEER CIRCLES PROGRAM Project Remix Charter School- Houston, TX- Pilot Program starting in 2020 (on-going)\nORGANIZATIONS\nCRIMINOLOGY GRADUATE STUDENT ASSOCIATION The University of Texas at Dallas- Student Member/Board Member (current)\nCO- LEAD FACILITATOR FOR IMPLICIT BIAS WORKSHOPS - BLOOMBERG AND ASSOCIATES Implicit Bias Culture of Data and Accountability team\nVice President of Alpha Sigma National Honor Society (2020-2021) Criminal Justice National Honor Society- University of Houston-Downtown\nReferences: Upon request"
   }
 ]
