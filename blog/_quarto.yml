@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Diana Rodriguez" 
-  site-url: https://Diana-C-Rodriguez.github.io/blog
+  site-url: https://Diana-C-Rodriguez.github.io.blog
   description: "This is Diana Rodriguez's personal Blog."
   navbar:
     right:
@@ -16,3 +16,6 @@ website:
       - icon: youtube
         href: https://
 
+format:
+  html:
+    theme: theme.scss

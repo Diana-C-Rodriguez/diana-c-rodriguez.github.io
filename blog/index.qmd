@@ -12,7 +12,7 @@ about:
       href: https://linkedin.com
     - icon: github
       text: Github
-      href: https://Diana-C-Rodriguez.github.io/_site
+      href: https://Diana-C-Rodriguez.github.io
 ---
 
 About this blog

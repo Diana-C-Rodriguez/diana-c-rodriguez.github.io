@@ -1,9 +1,9 @@
 [
   {
-    "listing": "/blog/blog.html",
+    "listing": "/blog.html",
     "items": [
-      "/blog/posts/post-with-code/index.html",
-      "/blog/posts/welcome/index.html"
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
     ]
   }
 ]
