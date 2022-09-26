@@ -1,0 +1,11 @@
+---
+title: "Assignment 1"
+---
+
+![Generative Architecture by Michael Hansmeyer. In this striking example of Computational Architecture, a grotto set was designed for Mozart's opera. (2018).](images/Generative+Architecture+by+Michael+Hansmeyer.jpeg)
+
+![Generative art by Anders Hoff. This is part of his project "Inconvergent", which explores the complex behavior that emerges from systems with simple rules.](images/Computer+Generated+Art+by+Anders+Hoff.jpeg)
+
+![](images/Fall%20leaf.jpg)
+
+![Although the chart above clearly demonstrates the different discount rate changes between hyperbolic and exponential discounting; however, the unites of the time delay variable could be more specifically labeled, as could the relevance of the rate over time. Additionally, the graph key is a bit misleading by using two different measures of change. The hyperbolic change seems to have a quicker descent at first; however, the key seems to contradict that in this visual.](images/chart.jpg)
