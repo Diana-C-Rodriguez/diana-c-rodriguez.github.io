@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Diana-C-Rodriguez.github.io"
+  title: "diana-c-rodriguez.github.io"
   navbar:
     left:
       - href: index.qmd
@@ -19,6 +19,10 @@ website:
         text: Assignments
       - href: Assignment2.qmd
         text: assignment2
+      - href: Assign3.qmd
+        text: assignment3
+      - href: Assign4.qmd
+        text: Assignment4
       - href: https://Diana-C-Rodriguez.github.io/Diana-C-Rodriguez.github.io-blog
         text: blog
       
