@@ -1,1 +1,0 @@
-![regression model 3 is the most "fit". This means that the points of the plot are closest to the line of regression when compared to other plots.](Rplot.png)
