@@ -1,0 +1,83 @@
+"Hackathon" Synergy Report:
+
+[About the data:]{.underline}
+
+The data set used aimed to observe the net domestic immigration rates (NDIR), which represents the net movement of people into and out of a state, over the period 1990-1994 divided by the population of the state. Alaska and Hawaii are excluded from the analysis because the environments of these states are significantly different from the other 48, and their locations present certain barriers to immigration. Eleven predictor variables thought to influence NDIR are defined in Table 1.4.
+
+![](images/not%20for%20project-table%201.4%20%20Small.jpeg)
+
+[Generated charts:]{.underline}
+
+The first and second tax bracket shows a higher number of people immigrating in this tax bracket than emigrating. However, the third and fourth tax brackets have lower immigration rates than emigration rates. This shows there is no general trend of NDIR in relation to all four tax brackets.
+
+What can be observed is that the lower the value of NDIR, the more people are emigrating out of the state, the higher the value of NDIR, the more people are immigrating into the state.
+
+The immigration/emigration graph organized by region, suggests that people in the Northeast region almost exclusively emigrate. The effects of region on tax bracket model shows that none of the participants responded that they belonged in either of the first two tax brackets. This could also be the reason that we do not see Northeast noticeably represented in the aggregated model.
+
+Independent Variable (IV): Regional Tax Brackets
+
+Dependent Variable (DV): NDIR (Net Domestic Immigration Rate)
+
+people immigrating- "1"
+
+emigrating - "0"
+
+```{r}
+
+# Setting up the new R environment, starting fresh, click run!
+
+rm(list=ls())
+
+# Setting up the working directory, click run!
+
+setwd("~/Desktop/PhD /UTD/FALL 22/EPPS 6356/Diana-C-Rodriguez.github.io")
+
+# Reading the file, click run!
+
+HW4 <- read.delim("HW4data.txt")
+
+head(HW4)
+
+# Turning on the packages required for HW4, click run!
+
+library("Hmisc")
+
+library("tidyverse")
+
+# Identifying the mean of HW4 for later usage: mean= 10.88854, click run!
+
+mean(HW4$NDIR)
+
+# Creating a new dummy variable, i.e. above 1 or below 0 mean, click run!
+
+HW4$NDIR_dummy <- ifelse(HW4$NDIR>=10.88854, 1, 0)
+
+# Creating taxes into an ordinal variable with 4 equally sized bins, click run!
+
+HW4$tax_ord <- cut2(HW4$Taxes, m=12)
+
+# Creating cross tabulation, click run!
+
+table(HW4$NDIR_dummy,HW4$tax_ord)
+
+# Creating bar plot, click run!
+
+barplot(table(HW4$NDIR_dummy,HW4$tax_ord), beside=TRUE, main= "The Effect of Tax Brackets on NDIR", xlab= "Tax Brackets", ylab= "NDIR", legend = TRUE)
+
+barplot(table(HW4$NDIR_dummy,HW4$Region), beside=TRUE, main= "The Effect of Region on NDIR", xlab= "Region", ylab= "NDIR", legend = TRUE)
+
+barplot(table(HW4$tax_ord,HW4$Region), beside=TRUE, main= "The Effect of Region on Tax Brackets", xlab= "Region", ylab= "Tax Bracket Prevalence", legend = TRUE)
+
+# Code for a Table with Embedded Charts
+
+# ggplot(df,aes(z,x,fill=as.factor(y)),angle=45,size=16)+ geom_bar(position="dodge",stat="identity") +facet_wrap(~z,nrow=3)
+
+# Creating Table with Embedded Charts, click run! 
+
+df <- data.frame(HW4)
+
+p <- ggplot(df,aes(tax_ord,NDIR,fill=as.factor(Region)),angle=45,size=5)+ geom_bar(position="dodge",stat="identity") +facet_wrap(~tax_ord,nrow=3)
+
+p + ggtitle("The Effect of Tax Brackets on NDIR by Region") + xlab("Tax Brackets") + ylab("NDIR") + guides(fill=guide_legend(title="Region")) + theme(axis.text.x = element_text(size = 6))
+
+```

@@ -1,0 +1,40 @@
+---
+title: "Assign5"
+editor: visual
+---
+
+```{r}
+
+library(haven)
+library(sjmisc)
+library(sjlabelled)
+library(ggplot2)
+
+
+
+table(IRS$country) #frequency of respondents per country ID (84 respondents for country "10")
+
+table(attr(IRS$country, "labels")) #how to view frequency by name (the way it is in the codebook) instead of Variable name (country ID) 
+
+attr(IRS$alcolmc, "labels") #to see value of each response. EX: 0= never last month , 9= no answer
+
+
+IRS$alcolmc2 <- (IRS$alcolmc) 
+
+IRS$alcolmc2[IRS$alcolmc2==7|IRS$alcolmc2==9] <- NA
+table(IRS$alcolmc2, useNA="always")
+
+meandrink <- mean(IRS$alcolmc2, na.rm= T) #mean of drinking frequency 
+
+
+ggplot(data = IRS,aes(x= alcolmc))+
+  geom_histogram(stat = "count", show.legend= TRUE, color= "black"
+           , alpha = .8) #plotting responses by frequency 
+
+
+TCM <- table(IRS$country,IRS$alcolmc)
+barplot(TCM, beside = TRUE, col = c("lightblue", "mistyrose", "cyan",  "lavender", "purple"), main = "average alcohol in a month by country", font.main = 4, xlab="average number of drinks", ylab = "country id")
+
+
+
+```

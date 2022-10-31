@@ -15,17 +15,24 @@ website:
         text: Project
       - href: CV.qmd
         text: CV
-      - href: assignments.qmd
-        text: Assignments
-      - href: Assignment2.qmd
-        text: assignment2
-      - href: Assign3.qmd
-        text: assignment3
-      - href: Assign4.qmd
-        text: Assignment4
+      - text: EPPS6356 assignments   
+        menu: 
+          - assignments.qmd
+          - Assignment2.qmd
+          - Assign3.qmd
+          - Assign4.qmd
+          - Assign5.qmd
+      
+        
       - href: https://Diana-C-Rodriguez.github.io/Diana-C-Rodriguez.github.io-blog
         text: blog
-      
+      - href: https://diana-c-rodriguez.shinyapps.io/Shiny1/?_ga=2.254884232.181556009.1667238624-657830594.1667238624
+        text: Shiny 
+        
+      - text: EPPS6302 Assignments
+        menu: 
+          - assign02.qmd
+          
         
 
 
