@@ -127,5 +127,6 @@ server <- function(input, output) {
 
 # Create Shiny app ----
 shinyApp(ui, server)
-rsconnect::deployApp(server = "shinyapps.io")
+
+
 
